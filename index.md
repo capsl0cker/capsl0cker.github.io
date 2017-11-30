@@ -2,4 +2,5 @@
 layout: default
 ---
 
-测试中文
+[Template Reference](template).
+[Another page](another-page).
