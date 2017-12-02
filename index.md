@@ -2,6 +2,7 @@
 layout: default
 ---
 
+# Blog
 
 ## [](#header-2) [Template Reference](template)
 
