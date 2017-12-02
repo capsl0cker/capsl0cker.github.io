@@ -7,3 +7,5 @@ layout: default
 # [Template Reference](template)
 
 # [Another page](another-page)
+
+# [post page](_post/test)
