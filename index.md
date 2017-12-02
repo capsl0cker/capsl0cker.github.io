@@ -2,10 +2,8 @@
 layout: default
 ---
 
-## [](#header-1)2017
+# [](#header-1)2017
 
-# [Template Reference](template)
+### [Template Reference](template)
 
-# [Another page](another-page)
-
-# [post page](_post/test)
+### [Another page](another-page)
