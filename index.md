@@ -2,8 +2,8 @@
 layout: default
 ---
 
-# Blog
+## [](#2017)
 
-## [](#header-2) [Template Reference](template)
+# [Template Reference](template)
 
-## [](#header-2) [Another page](another-page)
+# [Another page](another-page)
