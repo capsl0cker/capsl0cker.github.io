@@ -4,13 +4,13 @@ layout: default
 
 Here are just some notes.
 
-# [](#header-1)How to install&config VirtualBox on Fedora 27
+#How to install&config VirtualBox on Fedora 27
 
 1. Switch to root
 
-```bash
+```shell
 su -
-```bash
+```shell
 
 2. Install Fedora Repo Files
 
