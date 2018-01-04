@@ -45,7 +45,7 @@ After that, we can find our phone from our computer.
 
 ## Use Putty to connect Hyper-V Linux VM by serial console
 
-#### 1. Run below commands in PowerShell as Administrator
+### 1. Run below commands in PowerShell as Administrator
 
 ```PowerShell
 PS C:\Users\wangj85> Get-VMComPort -VMName wj-centos
@@ -64,15 +64,16 @@ wj-centos COM 1   \\.\pipe\centos
 wj-cetnos COM 2
 ```
 
-##### 2. Add kernel parameters to Linux boot parameter
+### 2. Add kernel parameters to Linux boot parameter
 
 ```bash
 console=ttyS0,115200
 ```
 
-#### 3. Putty setting
+### 3. Putty setting
 
 'Host Name(or IP address)' -> '\\.\pipe\centos'
+
 'Connection type'          -> 'Serial'
 
 ---End---
