@@ -8,4 +8,6 @@ layout: default
 
 ### [Template Reference](template)
 
+### [Various Linux Init Systems](linux-init-system)
+
 ### [Another page](another-page)
