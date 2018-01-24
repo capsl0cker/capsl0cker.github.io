@@ -9,20 +9,20 @@ sysvinit, upstart, systemd.
 
 ## 1. Sysvinit
 
-1. Scripts are located in /etc/rc.d/init.d/
+1. Configuration scripts are located in /etc/rc.d/init.d/.
 
-2. Usually, each script has start, stop, and restart functions.
+2. Usually, each script has three functions: start, stop, and restart.
 
-3. System has different run levels, ususally, 0-6; And different scripts
-run at different run levels.
+3. System has different run levels, ususally, 0-6 and S; And different scripts
+should run on different levels.
 
 4. Usually, we create one fold for each run level under /etc/rc.d/,
 e.g. /etc/rc.d/rc0.d, /etc/rc.d/rc1.d, ..., /etc/rc.d/rc6.d.
 
-5. We create various symbol links in /etc/rc.d/rcX.d to /etc/rc.d/init.d.
+5. We create various symbol links in /etc/rc.d/rcX.d which refers to scripts in /etc/rc.d/init.d.
 Each link represents that this script will be run at this level when system boot up.
 
-6. Command 'chkconfig' can build such symbol link on RH/Fedora/CentOS.
+6. Command 'chkconfig' can be used to build such symbol link on RH/Fedora/CentOS.
 Command 'update-rc.d' does the same thing for Debian/Ubuntu.
 
 7. System default run level is set in /etc/inittab.
@@ -30,16 +30,16 @@ Command 'update-rc.d' does the same thing for Debian/Ubuntu.
 
 ## 2. Upstart
 
-Digest from [http://upstart.ubuntu.com/getting-started.html](Upstart Getting Started)
+Digests from [Upstart Getting Started](http://upstart.ubuntu.com/getting-started.html)
 
 1. Upstart Jobs(scripts) are located in /etc/init/ , and have .conf extension.
 And they are plain text files and are executable.
 
-2. All jobs files must have either an **exec** or **script** stanza.
-They specifis what will be run for the job.
+2. All jobs files must have either an _exec_ or _script_ stanza.
+They specifies what will be run for the job.
 
 3. Additional shell code can be given to be run **before** or **after** the job specified
-with **exec** or **script**. These are not expected to start the process, in fact, they are
+with _exec_ or _script_. These are not expected to start the process, in fact, they are
 intended for preparing the environment and cleaning up afterwards.
 
 4. Jobs can be started and stopped manually. However, they can be done automatically when events
@@ -59,22 +59,22 @@ Use **initctl list** to get a list of all jobs and their states.
 event will be affected.
 
 
-## 3. [https://www.freedesktop.org/wiki/Software/systemd](systemd)
+## 3. [systemd](https://www.freedesktop.org/wiki/Software/systemd)
 
-Digests from [http://lea-linux.org/documentations/Systemd](Introduction to systemd).
+Digests from [Introduction to systemd](http://lea-linux.org/documentations/Systemd).
 
 1. The configuration of the services is by default in _/lib/systemd/system_ or
-_/usr/lib/systemd/system_. Its a good practice to store custom configurations in
-_/etc/systemd/system_ because they wont be deleted in case  of system update.
+_/usr/lib/systemd/system_. It's a good practice to store custom configurations in
+_/etc/systemd/system_ because they won't be deleted in case of system update.
 
 2. The basic object of systemd is _unit_, which has a name and type, such like
-NetworkManager.service defines a service to handle network management,
-systemd-shutdown.socket sets the socket for shutdown. Systemd typs have service,
+_NetworkManager.service_ defines a service to handle network management,
+_systemd-shutdown.socket_ sets the socket for shutdown. Systemd types include service,
 socket, busname, target, path, mount,...
 
 3. Use command _systemctl list-units_ to get all units.
 
-4. Use command _systemctl <action> <service_name>.service_ to manage service.
+4. Use command _systemctl `<action`> `<service`_name`>.service_ to manage service.
 _action_ can be start, stop, restart, reload, enable, disable, mask, kill.
 
 5. Use _systemctl <action> <xx>_ to get info of a service.
