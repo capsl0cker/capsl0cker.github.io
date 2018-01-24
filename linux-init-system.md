@@ -74,10 +74,10 @@ socket, busname, target, path, mount,...
 
 3. Use command _systemctl list-units_ to get all units.
 
-4. Use command _systemctl `<action`> `<service`_name`>.service_ to manage service.
-_action_ can be start, stop, restart, reload, enable, disable, mask, kill.
+4. Use command _systemctl `<action`> `<service_name`>.service_ to manage service.
+_action_ can be one of start, stop, restart, reload, enable, disable, mask, kill.
 
-5. Use _systemctl <action> <xx>_ to get info of a service.
+5. Use _systemctl `<action`> `<xxx`>_ to get info of a service.
 _action_ can be one of list-unit-files, status, is-active, is-enabled, is-failed,...
 
 6. Use _journalctl_ to view log information.
@@ -89,3 +89,5 @@ _action_ can be one of list-unit-files, status, is-active, is-enabled, is-failed
 
 2. if it gives _/sbin/init_, then try _stat /sbin/init_ or
 _/sbin/init --version_
+
+---END---
