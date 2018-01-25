@@ -76,5 +76,28 @@ console=ttyS0,115200
 
 'Connection type'          -> 'Serial'
 
+## CentOS 7 changes timezone/date
+
+```Bash
+# Check current timezone
+$ ls -l /etc/localtime
+lrwxrwxrwx 1 root root 36 Jan 26 16:55 /etc/localtime -> ../usr/share/zoneinfo/America/New_York
+
+# Find list of all available time zones
+$ timedatectl list-timezones
+
+# Set timezone
+$ timedatectl set-timezone Asia/Hong_Kong
+$ ls -l /etc/localtime
+lrwxrwxrwx 1 root root 36 Jan 26 16:55 /etc/localtime -> ../usr/share/zoneinfo/Asia/Hong_Kong
+
+# Set the time and date
+# Format is 'date MMDDhhmmYYYY'
+$ sudo date 012609272018
+Fri Jan 26 09:27:00 HKT 2018
+$ sudo hwclock --systohc
+Fri Jan 26 09:27:24 HKT 2018
+```
+
 ---End---
 
