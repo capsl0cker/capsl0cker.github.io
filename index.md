@@ -10,4 +10,6 @@ layout: default
 
 ### [Various Linux Init Systems](linux-init-system)
 
+### [Scheme Learning](scheme-learning)
+
 ### [Another page](another-page)
