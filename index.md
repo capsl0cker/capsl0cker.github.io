@@ -12,4 +12,6 @@ layout: default
 
 ### [Scheme Learning](scheme-learning)
 
+### [HyperV LIS](hyperv-lis)
+
 ### [Another page](another-page)
