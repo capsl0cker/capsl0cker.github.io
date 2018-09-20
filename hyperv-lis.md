@@ -24,6 +24,7 @@ _struct rndis_device_
 
 ## 2. Relationship
 
+```C
 struct netvsc_device {
 	...
 	struct netvsc_channel chann_table[] {
@@ -42,6 +43,7 @@ struct netvsc_device {
 	}
 
 }
+```
 
 
 hv_device -> device -> driver_data == net_device
