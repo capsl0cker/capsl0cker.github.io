@@ -21,6 +21,7 @@ if n >= 3, then f(n) = f(n - 1) + 2 * f(n - 2) + 3 * f(n - 3)
 (define (fiter n)
         (define (f a b c i)
            (cond ((< n 3) n)
-               (> i n) c)
+               ((> i n) c)
                (else (f b c (+ (* 3 a) (* 2 b) c) (+ i 1)))))
+ (f 0 1 2 3))
 ```
