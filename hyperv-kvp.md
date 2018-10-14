@@ -61,7 +61,7 @@ vmbus_sendpacket(...);
 
 下面是KVP state machine：
 
-![](assets/images/kpv-state-machine.jpg)
+![](kpv-state-machine.jpg)
 
 1. hv_utils 完成注册，状态变为DEVICE_INIT。
 
