@@ -12,4 +12,6 @@ layout: default
 
 ### [HyperV LIS](hyperv-lis)
 
+### [HyperV KVP](hyperv-kvp)
+
 ### [Another page](another-page)
